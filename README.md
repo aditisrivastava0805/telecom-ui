@@ -1,12 +1,78 @@
-# React + Vite
+# Telecom SIM Charging Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based toolbox for simulating telecom charging interactions, including Voice, SMS, and Data sessions. The UI is designed for clarity and ease of use, with a sleek sidebar, interactive controls, and a real-time log of charging events.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Sidebar Navigation:**  
+  Switch between Voice, SMS, and Data simulation modes with visually distinct, color-coded buttons.
+- **Session Setup:**  
+  Configure telecom session parameters (A-Number, IMSI, etc.) and advanced settings.
+- **Charging Controls:**  
+  Context-aware controls for starting/ending Voice calls, sending SMS, and managing Data/Policy sessions.
+- **Live Charging View:**  
+  See a real-time log of all simulated charging interactions.
+- **Responsive & Clean UI:**  
+  Built with Tailwind CSS for a modern, consistent look.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16+ recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/telecom_sim.git
+   cd telecom_sim
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+  components/
+    Sidebar.jsx         # Sidebar navigation and session setup
+    Controls.jsx        # Charging controls (buttons)
+    ChargingView.jsx    # Log of charging interactions
+    Header.jsx          # App header
+  App.jsx               # Main app layout and state
+  index.css             # Tailwind CSS styles
+```
+
+## Customization
+
+- **Add new session parameters:**  
+  Edit `Sidebar.jsx` to add or modify input fields.
+- **Change button actions or logs:**  
+  Update `Controls.jsx` to customize button behavior and log messages.
+- **Adjust styles:**  
+  Modify Tailwind classes in the JSX files or update `index.css`.
+
+## Credits
+
+- UI icons from [lucide-react](https://lucide.dev/)
+- Built with [React](https://react.dev/) and [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+**v1.0.0 • ECEVS**
