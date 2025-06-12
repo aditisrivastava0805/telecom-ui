@@ -51,9 +51,11 @@ A modern React-based toolbox for simulating telecom charging interactions, inclu
 ```
 src/
   components/
-    Sidebar.jsx         # Sidebar navigation and session setup
-    Controls.jsx        # Charging controls (buttons)
-    ChargingView.jsx    # Log of charging interactions
+    Sidebar.jsx         # Sidebar navigation (collapsed) and service selection
+    SetupSidebar.jsx    # Session setup (expands as a right sidebar)
+    ChargingStatusCard.jsx # Shows current session status
+    ChargingControlsCard.jsx # Charging controls (context-aware buttons)
+    LogCard.jsx         # Log of charging interactions
     Header.jsx          # App header
   App.jsx               # Main app layout and state
   index.css             # Tailwind CSS styles
@@ -76,3 +78,4 @@ src/
 ---
 
 **v1.0.0 • ECEVS**
+

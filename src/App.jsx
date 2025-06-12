@@ -5,6 +5,7 @@ import Header from './components/Header'
 import ChargingStatusCard from './components/ChargingStatusCard'
 import ChargingControlsCard from './components/ChargingControlsCard'
 import LogCard from './components/LogCard'
+import SetupSidebar from './components/SetupSidebar'
 
 export default function App() {
   const [service, setService] = useState('Voice')
@@ -12,6 +13,7 @@ export default function App() {
   const [aNumber, setANumber] = useState('')
   const [aImsi, setAImsi] = useState('')
   const [ratingGroup, setRatingGroup] = useState('')
+  const [showSession, setShowSession] = useState(true)
 
   const addLog = (message, label, detail) => {
     setLogs([
@@ -29,6 +31,18 @@ export default function App() {
       <Sidebar
         service={service}
         setService={setService}
+        aNumber={aNumber}
+        setANumber={setANumber}
+        aImsi={aImsi}
+        setAImsi={setAImsi}
+        ratingGroup={ratingGroup}
+        setRatingGroup={setRatingGroup}
+        showSession={showSession}
+        setShowSession={setShowSession}
+      />
+      <SetupSidebar
+        showSession={showSession}
+        setShowSession={setShowSession}
         aNumber={aNumber}
         setANumber={setANumber}
         aImsi={aImsi}
